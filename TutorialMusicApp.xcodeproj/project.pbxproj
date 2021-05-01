@@ -16,6 +16,7 @@
 		6493131E263A69060083D788 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6493131C263A69060083D788 /* LaunchScreen.storyboard */; };
 		64931329263A69060083D788 /* TutorialMusicAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64931328263A69060083D788 /* TutorialMusicAppTests.swift */; };
 		64931334263A69060083D788 /* TutorialMusicAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64931333263A69060083D788 /* TutorialMusicAppUITests.swift */; };
+		6493134A263BF5C80083D788 /* Tracks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64931349263BF5C80083D788 /* Tracks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		6493132F263A69060083D788 /* TutorialMusicAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TutorialMusicAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64931333263A69060083D788 /* TutorialMusicAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialMusicAppUITests.swift; sourceTree = "<group>"; };
 		64931335263A69060083D788 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64931349263BF5C80083D788 /* Tracks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracks.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,11 @@
 		6493130D263A69010083D788 /* TutorialMusicApp */ = {
 			isa = PBXGroup;
 			children = (
-				6493130E263A69010083D788 /* AppDelegate.swift */,
-				64931310263A69020083D788 /* SceneDelegate.swift */,
-				64931312263A69020083D788 /* ViewController.swift */,
+				64931348263BF5B90083D788 /* Models */,
+				6493134B263D0A250083D788 /* VC */,
+				6493134C263D0A370083D788 /* Cell */,
+				6493134D263D0A3E0083D788 /* Supporting */,
 				64931314263A69020083D788 /* Main.storyboard */,
-				6493131A263A69060083D788 /* Assets.xcassets */,
 				6493131C263A69060083D788 /* LaunchScreen.storyboard */,
 				6493131F263A69060083D788 /* Info.plist */,
 				64931317263A69020083D788 /* TutorialMusicApp.xcdatamodeld */,
@@ -129,6 +131,39 @@
 				64931335263A69060083D788 /* Info.plist */,
 			);
 			path = TutorialMusicAppUITests;
+			sourceTree = "<group>";
+		};
+		64931348263BF5B90083D788 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				64931349263BF5C80083D788 /* Tracks.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6493134B263D0A250083D788 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				64931312263A69020083D788 /* ViewController.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		6493134C263D0A370083D788 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6493134D263D0A3E0083D788 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				6493131A263A69060083D788 /* Assets.xcassets */,
+				6493130E263A69010083D788 /* AppDelegate.swift */,
+				64931310263A69020083D788 /* SceneDelegate.swift */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64931313263A69020083D788 /* ViewController.swift in Sources */,
+				6493134A263BF5C80083D788 /* Tracks.swift in Sources */,
 				6493130F263A69010083D788 /* AppDelegate.swift in Sources */,
 				64931311263A69020083D788 /* SceneDelegate.swift in Sources */,
 				64931319263A69020083D788 /* TutorialMusicApp.xcdatamodeld in Sources */,
