@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="147" id="KGk-i7-Jjw" customClass="MusicCell" customModule="TutorialMusicApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0rR-TM-sjo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6M-o8-5Ws">
+                                <rect key="frame" x="10" y="13" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="emu-o3-cQ6">
+                                <rect key="frame" x="0.0" y="42" width="320" height="105"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="F94-up-96w">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="emu-o3-cQ6" firstAttribute="leading" secondItem="0rR-TM-sjo" secondAttribute="leading" id="88n-Im-7U1"/>
+                            <constraint firstItem="R6M-o8-5Ws" firstAttribute="top" secondItem="0rR-TM-sjo" secondAttribute="top" constant="13" id="HnI-tC-5y3"/>
+                            <constraint firstItem="emu-o3-cQ6" firstAttribute="top" secondItem="R6M-o8-5Ws" secondAttribute="bottom" constant="8" id="Y8X-st-Ura"/>
+                            <constraint firstAttribute="trailing" secondItem="emu-o3-cQ6" secondAttribute="trailing" id="aMD-0X-CFw"/>
+                            <constraint firstItem="R6M-o8-5Ws" firstAttribute="leading" secondItem="0rR-TM-sjo" secondAttribute="leading" constant="10" id="piq-Gp-S22"/>
+                            <constraint firstAttribute="bottom" secondItem="emu-o3-cQ6" secondAttribute="bottom" id="xJe-zh-CcQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="0rR-TM-sjo" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="TiW-k3-cJa"/>
+                    <constraint firstItem="0rR-TM-sjo" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gfd-KR-LBR"/>
+                    <constraint firstAttribute="bottom" secondItem="0rR-TM-sjo" secondAttribute="bottom" id="qqc-8A-U0q"/>
+                    <constraint firstAttribute="trailing" secondItem="0rR-TM-sjo" secondAttribute="trailing" id="sQS-jH-n7f"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="_backgroundView" destination="0rR-TM-sjo" id="9eA-9V-hKh"/>
+                <outlet property="collectionView" destination="emu-o3-cQ6" id="dLd-GQ-tm4"/>
+                <outlet property="sectionHeaderLabel" destination="R6M-o8-5Ws" id="WXi-RV-UEl"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="164.39732142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
