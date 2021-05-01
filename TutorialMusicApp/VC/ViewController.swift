@@ -10,6 +10,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+    //MARK: Components
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var trackImageView: UIImageView!
     @IBOutlet weak var tarckNameLabel: UILabel!
@@ -31,7 +32,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    func loadJSON(){
+    //MARK: Private Func
+    private func loadJSON(){
         let path = Bundle.main.url(forResource: "music", withExtension: "json")
         do{
             let jsonData = try Data(contentsOf: path!,options: Data.ReadingOptions.mappedIfSafe)
@@ -67,6 +69,23 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: Layout
+    private func customNavbar() {
+        self.title = "Music Paly"
+        UIApplication.shared.statusBarStyle = .lightContent
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isTranslucent = false
+        self.navigationController?.navigationBar.barTintColor = .red
+        
+        let searchButton = UIBarButtonItem(image: UIImage(named: "search"), style: .done, target: self, action: nil)
+        let menuButton =  UIBarButtonItem(image: UIImage(named: "menu"), style: .done, target: self, action: nil)
+        
+        self.navigationItem.leftBarButtonItem = menuButton
+        self.navigationItem.rightBarButtonItem = searchButton
+
+    }
 
 }
 
