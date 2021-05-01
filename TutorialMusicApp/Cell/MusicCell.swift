@@ -38,7 +38,7 @@ class MusicCell: UITableViewCell{
     }
     
     //MARK: Private func
-    private func setCollectionViewDataSorceDelegate(index: IndexPath, tracks: [TopTrack]){
+    func setCollectionViewDataSorceDelegate(index: IndexPath, tracks: [TopTrack]){
         self.collectionView.dataSource = self
         self.collectionView.delegate = self
         indexPath = index

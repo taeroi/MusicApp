@@ -59,10 +59,21 @@
                                                     <constraint firstAttribute="width" constant="40" id="FfK-E4-nWS"/>
                                                 </constraints>
                                                 <state key="normal" image="pause"/>
+                                                <connections>
+                                                    <action selector="pressedPlayPauseBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FfJ-yo-7KA"/>
+                                                </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GC3-uZ-QxK">
+                                                <rect key="frame" x="176" y="57" width="41.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstItem="MtG-Tl-GqL" firstAttribute="leading" secondItem="GC3-uZ-QxK" secondAttribute="trailing" constant="2" id="6rH-Zf-x1Y"/>
+                                            <constraint firstItem="GC3-uZ-QxK" firstAttribute="centerY" secondItem="MtG-Tl-GqL" secondAttribute="centerY" id="E5i-xs-te8"/>
                                             <constraint firstItem="MtG-Tl-GqL" firstAttribute="leading" secondItem="VF7-hc-H5h" secondAttribute="trailing" constant="20" id="P2c-Zt-Eg5"/>
                                             <constraint firstAttribute="trailing" secondItem="MtG-Tl-GqL" secondAttribute="trailing" constant="20" id="Vgh-wC-rlD"/>
                                             <constraint firstItem="VF7-hc-H5h" firstAttribute="centerY" secondItem="3vB-UQ-WF6" secondAttribute="centerY" id="dwG-IE-Ify"/>
@@ -115,12 +126,13 @@
                     <navigationItem key="navigationItem" id="sxE-8I-lZa"/>
                     <connections>
                         <outlet property="artistNameLabel" destination="e4P-t7-DNP" id="A6n-SH-lKH"/>
+                        <outlet property="durationLabel" destination="GC3-uZ-QxK" id="ZQN-LG-kVo"/>
                         <outlet property="playPauseButton" destination="MtG-Tl-GqL" id="TOQ-D8-hFQ"/>
                         <outlet property="playerBlurView" destination="3vB-UQ-WF6" id="a7c-GJ-z0X"/>
                         <outlet property="progressView" destination="lu2-Bl-o1C" id="fOw-Uz-FHH"/>
                         <outlet property="tableView" destination="vfk-Fa-T0n" id="UjY-2t-lF0"/>
-                        <outlet property="tarckNameLabel" destination="FjC-XG-dcC" id="J5k-7g-eGe"/>
                         <outlet property="trackImageView" destination="3TJ-vs-FuC" id="HdR-E8-wnl"/>
+                        <outlet property="trackNameLabel" destination="FjC-XG-dcC" id="J5k-7g-eGe"/>
                         <outlet property="trackPlayerView" destination="HkR-s9-y3H" id="NeO-Do-NTM"/>
                     </connections>
                 </viewController>
