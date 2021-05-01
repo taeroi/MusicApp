@@ -121,6 +121,7 @@
                         <outlet property="tableView" destination="vfk-Fa-T0n" id="UjY-2t-lF0"/>
                         <outlet property="tarckNameLabel" destination="FjC-XG-dcC" id="J5k-7g-eGe"/>
                         <outlet property="trackImageView" destination="3TJ-vs-FuC" id="HdR-E8-wnl"/>
+                        <outlet property="trackPlayerView" destination="HkR-s9-y3H" id="NeO-Do-NTM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

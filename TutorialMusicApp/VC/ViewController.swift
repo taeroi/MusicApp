@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tarckNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
     @IBOutlet weak var playPauseButton: UIButton!
-    
+    @IBOutlet weak var trackPlayerView: UIView!
     @IBOutlet weak var playerBlurView: UIView!
     @IBOutlet weak var progressView: UIProgressView!
     
@@ -33,6 +33,16 @@ class ViewController: UIViewController {
     }
 
     //MARK: Private Func
+    
+    private func initialSetup(){
+        customNavbar()
+        
+        tableView.register(MusicCell.self, forCellReuseIdentifier: "cell")
+        trackPlayerView.isHidden = true
+        loadJSON()
+        addBlurToPlayer()
+    }
+    
     private func loadJSON(){
         let path = Bundle.main.url(forResource: "music", withExtension: "json")
         do{
@@ -69,7 +79,17 @@ class ViewController: UIViewController {
         }
     }
     
+    private func addBlurToPlayer(){
+        let blur = UIBlurEffect(style: .light)
+        let blurView = UIVisualEffectView(effect: blur)
+        blurView.frame = playerBlurView.bounds
+        blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        playerBlurView.addSubview(blurView)
+    }
+    
     //MARK: Layout
+}
+extension ViewController {
     private func customNavbar() {
         self.title = "Music Paly"
         UIApplication.shared.statusBarStyle = .lightContent
@@ -86,6 +106,5 @@ class ViewController: UIViewController {
         self.navigationItem.rightBarButtonItem = searchButton
 
     }
-
 }
 
