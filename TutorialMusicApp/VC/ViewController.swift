@@ -122,7 +122,7 @@ extension ViewController {
         let blurView = UIVisualEffectView(effect: blur)
         blurView.frame = playerBlurView.bounds
         blurView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        playerBlurView.addSubview(blurView)
+//        playerBlurView.addSubview(blurView)
     }
     
     private func playTrack(track: TopTrack){
