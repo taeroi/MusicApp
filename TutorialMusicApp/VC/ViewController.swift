@@ -143,8 +143,8 @@ extension ViewController {
         let t1 = self.audioPlayer?.currentTime()
         let t2 = self.audioPlayer?.currentItem?.asset.duration
         
-        let current = CMTimeGetSeconds(t1!)
-        let total = CMTimeGetSeconds(t2!)
+        let current = CMTimeGetSeconds(t1 ?? CMTime())
+        let total = CMTimeGetSeconds(t2 ?? CMTime())
         
         if Int(current) != Int(total){
             let min = Int(current) / 60
